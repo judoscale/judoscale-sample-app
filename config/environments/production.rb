@@ -85,4 +85,9 @@ Rails.application.configure do
   # config.active_record.database_selector = { delay: 2.seconds }
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
+
+  # NOTE: DANGEROUS: Only enable where needed, when needed, CAREFULLY.
+  # config.web_console.permissions = "75.118.90.191"
+  # config.web_console.development_only = false # NOTE: Move gem call out of `:developmnet` group in Gemfile
+  # config.consider_all_requests_local = true
 end

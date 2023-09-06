@@ -12,4 +12,12 @@ class ReqsController < ApplicationController
     # render layout: false
     head :ok
   end
+
+  def headers
+    render plain: request.headers.to_h.sort.to_h.filter { |k,v| v.is_a? String }.to_yaml
+  end
+
+  def debug
+    raise
+  end
 end

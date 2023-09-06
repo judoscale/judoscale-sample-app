@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :reqs
   get "req", to: "reqs#create"
   get "headers", to: "reqs#headers"
+  get "debug", to: "reqs#debug"
 
   root to: redirect("reqs/new")
 end
